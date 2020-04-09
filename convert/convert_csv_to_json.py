@@ -5,7 +5,6 @@ if(len(sys.argv) - 1 <= 0):
     exit()
 f = open(sys.argv[1], 'rU' )  
 reader = csv.DictReader( f, fieldnames = ( "value","descr" ))  
-#out = json.dumps( [ row for row in reader ] )  
 out = json.dumps( [ row for row in reader ], indent=4) 
 f = open(sys.argv[2], 'w')  
 f.write(out)  
